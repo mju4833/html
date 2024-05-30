@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>T1<br>Introduction</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">T1</a> 
+    <a href="#Introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a> 
+    <a href="#History" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">History</a> 
+    <a href="#Coaches" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Coaches</a> 
+    <a href="#Career" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Career</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>T1</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>T1</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Introduction.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="T1.jpg" style="width: 80%" onclick="onClick(this)" alt="T1">
+      <img src="제우스.jpg" style="width:100%" onclick="onClick(this)" alt="Zeus">
+      <img src="구마유시.jpg" style="width:100%" onclick="onClick(this)" alt="Gumayusi">
+    </div>
+
+    <div class="w3-half">
+      <img src="페이커.jpg" style="width:100%" onclick="onClick(this)" alt="Faker">
+      <img src="오너.jpg" style="width:100%" onclick="onClick(this)" alt="Oner">
+      <img src="케리아.jpg" style="width:100%" onclick="onClick(this)" alt="Keria">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="w3-container" id="History" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>History.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>T1 소속 대한민국의 리그 오브 레전드 프로게임단. 팀 약자는 T1.</p>
+    <p>2012년 후반기 SK telecom T1이라는 이름으로 창단되었다. 
+        2013 LCK 서머 우승 이후 리그 오브 레전드 시즌3 월드 챔피언십 우승까지 달성하면서 LCK 팀들 중 최초로 월드 챔피언십과 메이저 국제 대회를 우승한 팀으로서 한 해를 제패하였고, 
+        동시에 이후 5년간 지속되었던 리그의 기나긴 황금기를 열어젖히며 LCK의 황금기를 상징하는 최고의 팀이 되었다. 
+        2015년 통합 팀 체제 구축 이후부터 2017년 초중반까지는 단순 국내만이 아닌 전 세계적으로 공인받을 만한 왕조로서 그 명맥을 구가했다. 
+        우승을 달성했음에도 평가가 갈렸던 시절과 극심한 수준의 침체기 역시 존재하지만 암흑기가 전성기의 찬란한 광휘를 가리지 못하고 있고, 
+        전 세계의 수많은 리그 오브 레전드 프로 팀 중 명문 팀을 꼽으라고 하면 반드시 언급된다.
+    </p>
+  </div>
+  
+  <!-- Coaches -->
+  <div class="w3-container" id="Coaches" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Coaches.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>현재 T1의 코치들.</p>
+    <p>원래 SKT T1 스페셜 포스 팀의 코치였던 최병훈이 리그 오브 레전드의 인기가 올라옴을 느끼던 와중, 
+        당시 통신사 라이벌 구단이었던 KT가 LoL 프로 팀을 창단하는 것을 보면서 구단 측에 SKT도 LoL 프로 팀이 필요하다고 주장했고, 
+        이것이 받아들여지면서 2012년 창단되었다. 
+        창단 초창기 팀의 구심점이었던 것은 최병훈과 당시 Azubu BLAZE에서 나와 새 팀을 구하고 있던 복한규. 
+        초창기 로스터 영입은 모두 복한규의 주도하에 이루어졌고, 창단과 동시에 IEM 쾰른에서 우승하며 단숨에 주목받는 팀이 되었다. 
+        그리고 이후 영입된 김정균 코치 주도로 2팀이 새롭게 창단되었다.
+    </p>
+    <p><b>Our Coaches are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="꼬마.jpg" alt="kkOma" style="width:100%">
+        <div class="w3-container">
+          <h3>김정균(kkOma)</h3>
+          <p class="w3-opacity">LCK의 T1 감독.</p>
+          <p>7년 동안 T1을 LoL e스포츠 역사상 최고의 팀으로 만든 원년 멤버 가운데 한 명이다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="톰.jpg" alt="Tom" style="width:100%">
+        <div class="w3-container">
+          <h3>김재현 Tom</h3>
+          <p class="w3-opacity">LCK의 T1 코치.</p>
+          <p>밴픽으로 약점을 완벽하게 공략해내며 팬들에게 '톰버지'라는 찬사를 받게 되었다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="로치.jpg" alt="Roach" style="width:100%">
+        <div class="w3-container">
+          <h3>김강희(Roach)</h3>
+          <p class="w3-opacity">LCK의 T1 코치.</p>
+          <p>28일 1군 코치로 재영입되며 임재현 코치와 함께 김정균 감독을 보좌하게 되었다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career / Pricing Tables -->
+  <div class="w3-container" id="Career" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Career.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>리그 오브 레전드 e스포츠 역사상 최고의 명문 팀이다.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">LCK</li>
+        <li class="w3-padding-16">15, 16, 17, 19, 20, 22 Spring</li>
+        <li class="w3-padding-16">13, 15, 19 summer</li>
+        <li class="w3-padding-16">x</li>
+        <li class="w3-padding-16">14 winter</li>
+        <li class="w3-padding-16">Most winner</li>
+        <li class="w3-padding-16">
+          <h2>10</h2>
+          <span class="w3-opacity">times win</span>
+        </li>
+
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Worlds</li>
+        <li class="w3-padding-16">13 Worlds</li>
+        <li class="w3-padding-16">15 Worlds</li>
+        <li class="w3-padding-16">16 Worlds</li>
+        <li class="w3-padding-16">23 Worlds</li>
+        <li class="w3-padding-16">Most winner</li>
+        <li class="w3-padding-16">
+          <h2>4</h2>
+          <span class="w3-opacity">times win</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Made by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">명재윤</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
